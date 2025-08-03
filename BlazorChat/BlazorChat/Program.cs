@@ -1,5 +1,6 @@
 using BlazorChat.Components;
 using Microsoft.AspNetCore.SignalR;
+using System.Collections.Concurrent;
 
 namespace BlazorChat
 {
@@ -20,10 +21,10 @@ namespace BlazorChat
             {
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                //app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseAntiforgery();
 
@@ -40,9 +41,32 @@ namespace BlazorChat
 // Ваш хаб
 public class ChatHub : Hub
 {
+    // Храним пользователей: ConnectionId -> Username
+    private static readonly ConcurrentDictionary<string, string> ConnectedUsers = new();
+
     public async Task SendMessage(string user, string message)
     {
-        // Рассылаем всем подключённым клиентам
         await Clients.All.SendAsync("ReceiveMessage", user, message);
+    }
+
+    public override async Task OnConnectedAsync()
+    {
+        await base.OnConnectedAsync();
+        // При подключении не знаем пользователя, ждем, пока клиент сообщит имя через метод RegisterUser
+    }
+
+    public override async Task OnDisconnectedAsync(Exception? exception)
+    {
+        if (ConnectedUsers.TryRemove(Context.ConnectionId, out var removedUser))
+        {
+            await Clients.All.SendAsync("UsersUpdated", ConnectedUsers.Values);
+        }
+        await base.OnDisconnectedAsync(exception);
+    }
+
+    public async Task RegisterUser(string username)
+    {
+        ConnectedUsers[Context.ConnectionId] = username;
+        await Clients.All.SendAsync("UsersUpdated", ConnectedUsers.Values);
     }
 }

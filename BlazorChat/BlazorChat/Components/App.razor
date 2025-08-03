@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="@Assets["BlazorChat.styles.css"]" />
     <ImportMap />
     <HeadOutlet />
+    <script>
+        function appendMessage(textarea, message) {
+            if (textarea) {
+                textarea.value += message;
+                textarea.scrollTop = textarea.scrollHeight;
+            }
+        }
+    </script>
 </head>
 
 <body>

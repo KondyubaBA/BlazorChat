@@ -2,6 +2,7 @@
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager Navigation
 @inject IJSRuntime JS
+@rendermode InteractiveServer
 
 <h3>SignalR Chat</h3>
 
@@ -11,12 +12,22 @@
 </div>
 
 <div style="margin-top:10px;">
+    <strong>Пользователи онлайн:</strong>
+    <ul>
+        @foreach (var user in connectedUsers)
+        {
+            <li>@user</li>
+        }
+    </ul>
+</div>
+
+<div style="margin-top:10px;">
     <textarea readonly rows="15" style="width:100%; overflow-y:auto;" @ref="chatOutput"></textarea>
 </div>
 
 <div style="margin-top:10px;">
-   @*  <input @bind="message" placeholder="Введите сообщение" style="width:80%"
-           @onkeypress="HandleKeyPress" /> *@
+    <input @bind="message" placeholder="Введите сообщение" style="width:80%"
+           @onkeypress="HandleKeyPress" />
     <button @onclick="SendMessage" disabled="@IsSendDisabled">Отправить</button>
 </div>
 
@@ -34,8 +45,12 @@
     private string message = string.Empty;
     private ElementReference chatOutput;
     private HubConnection? hubConnection;
+    private bool _isRendered;
 
-    private bool IsSendDisabled = false; //=> string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(message);
+    private List<string> connectedUsers = new();
+
+    private bool IsSendDisabled =>
+        string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(message);
 
     protected override async Task OnInitializedAsync()
     {
@@ -43,52 +58,94 @@
             .WithUrl(Navigation.ToAbsoluteUri("/chatHub"))
             .WithAutomaticReconnect()
             .Build();
-
-        hubConnection.On<string, string>("ReceiveMessage", async (user, receivedMessage) =>
-        {
-            var encodedMsg = $"{user}: {receivedMessage}\n";
-            await InvokeAsync(async () =>
-            {
-                await JS.InvokeVoidAsync("appendMessage", chatOutput, encodedMsg);
-            });
-        });
-
-        await hubConnection.StartAsync();
     }
 
-    private void SendMessage()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        // Логика отправки сообщения
-        Console.WriteLine($"Отправлено сообщение: {message}");
-        message = string.Empty;
+        if (firstRender && hubConnection is not null)
+        {
+            _isRendered = true;
+
+            // Обработка сообщений чата
+            hubConnection.On<string, string>("ReceiveMessage", async (user, receivedMessage) =>
+            {
+                if (!_isRendered)
+                    return;
+
+                var encodedMsg = $"{user}: {receivedMessage}\n";
+
+                try
+                {
+                    await InvokeAsync(async () =>
+                    {
+                        await JS.InvokeVoidAsync("appendMessage", chatOutput, encodedMsg);
+                    });
+                }
+                catch (JSDisconnectedException)
+                {
+                    // Игнорируем, т.к. компонент уже отключился
+                }
+            });
+
+            // Обработка обновления списка пользователей
+            hubConnection.On<IEnumerable<string>>("UsersUpdated", async (users) =>
+            {
+                connectedUsers = users.ToList();
+                await InvokeAsync(StateHasChanged);
+            });
+
+            try
+            {
+                await hubConnection.StartAsync();
+
+                // Регистрируем пользователя на сервере (чтобы сервер знал имя)
+                if (!string.IsNullOrWhiteSpace(username))
+                {
+                    await hubConnection.SendAsync("RegisterUser", username);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Ошибка запуска подключения SignalR: {ex.Message}");
+            }
+        }
     }
 
-    // private async Task SendMessage()
-    // {
-    //     if (hubConnection is not null && !IsSendDisabled)
-    //     {
-    //         try
-    //         {
-    //             await hubConnection.SendAsync("SendMessage", username, message);
-    //             message = string.Empty;
-    //         }
-    //         catch (Exception ex)
-    //         {
-    //             Console.Error.WriteLine($"Ошибка отправки сообщения: {ex.Message}");
-    //         }
-    //     }
-    // }
+    private async Task SendMessage()
+    {
+        if (hubConnection is not null && !IsSendDisabled)
+        {
+            try
+            {
+                // Если имя изменилось после подключения, обновляем на сервере
+                if (!string.IsNullOrWhiteSpace(username))
+                {
+                    await hubConnection.SendAsync("RegisterUser", username);
+                }
 
-    // private async Task HandleKeyPress(KeyboardEventArgs e)
-    // {
-    //     if (e.Key == "Enter" && !IsSendDisabled)
-    //     {
-    //         await SendMessage();
-    //     }
-    // }
+                await hubConnection.SendAsync("SendMessage", username, message);
+                message = string.Empty;
+                await InvokeAsync(StateHasChanged);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Ошибка отправки сообщения: {ex.Message}");
+            }
+        }
+    }
+
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter" && !IsSendDisabled)
+        {
+            await SendMessage();
+        }
+    }
 
     public async ValueTask DisposeAsync()
     {
+        _isRendered = false;
+
         if (hubConnection is not null)
         {
             await hubConnection.DisposeAsync();

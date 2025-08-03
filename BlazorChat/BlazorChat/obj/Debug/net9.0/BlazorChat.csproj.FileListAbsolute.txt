@@ -49,3 +49,4 @@ C:\Users\Admin\Documents\GitHub\BlazorChat\BlazorChat\BlazorChat\bin\Debug\net9.
 C:\Users\Admin\Documents\GitHub\BlazorChat\BlazorChat\BlazorChat\bin\Debug\net9.0\System.Net.ServerSentEvents.dll
 C:\Users\Admin\Documents\GitHub\BlazorChat\BlazorChat\BlazorChat\obj\Debug\net9.0\BlazorChat.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\BlazorChat\BlazorChat\BlazorChat\obj\Debug\net9.0\BlazorChat.csproj.Up2Date
+C:\Users\Admin\Documents\GitHub\BlazorChat\BlazorChat\BlazorChat\obj\Debug\net9.0\BlazorChat.sourcelink.json
