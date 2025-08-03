@@ -1,0 +1,232 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\components\\pages\\test.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\components\\pages\\test.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\components\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\components\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\components\\pages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\components\\pages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|c:\\users\\admin\\documents\\github\\blazorchat\\blazorchat\\blazorchat\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DD5B2B80-A68D-42C5-8D92-760B01661426}|BlazorChat\\BlazorChat.csproj|solutionrelative:blazorchat\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Test.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Test.razor",
+              "RelativeDocumentMoniker": "BlazorChat\\Components\\Pages\\Test.razor",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Test.razor",
+              "RelativeToolTip": "BlazorChat\\Components\\Pages\\Test.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T17:24:10.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Component.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Component.razor",
+              "RelativeDocumentMoniker": "BlazorChat\\Components\\Pages\\Component.razor",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Component.razor",
+              "RelativeToolTip": "BlazorChat\\Components\\Pages\\Component.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T17:23:38.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chat.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Chat.razor",
+              "RelativeDocumentMoniker": "BlazorChat\\Components\\Pages\\Chat.razor",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Chat.razor",
+              "RelativeToolTip": "BlazorChat\\Components\\Pages\\Chat.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T16:45:12.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "BlazorChat\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "BlazorChat\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T16:35:37.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "BlazorChat\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\_Imports.razor",
+              "RelativeToolTip": "BlazorChat\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T16:35:30.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\App.razor",
+              "RelativeDocumentMoniker": "BlazorChat\\Components\\App.razor",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\App.razor",
+              "RelativeToolTip": "BlazorChat\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T16:35:14.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "BlazorChat\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\appsettings.Development.json",
+              "RelativeToolTip": "BlazorChat\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-03T16:35:02.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "BlazorChat\\Components\\Routes.razor",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Routes.razor",
+              "RelativeToolTip": "BlazorChat\\Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T16:34:54.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Error.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "BlazorChat\\Components\\Pages\\Error.razor",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "BlazorChat\\Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T16:33:31.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "BlazorChat\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "BlazorChat\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T16:33:29.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "BlazorChat\\wwwroot\\app.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\wwwroot\\app.css",
+              "RelativeToolTip": "BlazorChat\\wwwroot\\app.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-03T16:33:16.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Program.cs",
+              "RelativeDocumentMoniker": "BlazorChat\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\BlazorChat\\BlazorChat\\BlazorChat\\Program.cs",
+              "RelativeToolTip": "BlazorChat\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T16:24:30.553Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

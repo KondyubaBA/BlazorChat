@@ -1,0 +1,97 @@
+﻿@page "/chat"
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+
+<h3>SignalR Chat</h3>
+
+<div>
+    <label>Ваше имя:</label>
+    <input @bind="username" placeholder="Введите имя" />
+</div>
+
+<div style="margin-top:10px;">
+    <textarea readonly rows="15" style="width:100%; overflow-y:auto;" @ref="chatOutput"></textarea>
+</div>
+
+<div style="margin-top:10px;">
+   @*  <input @bind="message" placeholder="Введите сообщение" style="width:80%"
+           @onkeypress="HandleKeyPress" /> *@
+    <button @onclick="SendMessage" disabled="@IsSendDisabled">Отправить</button>
+</div>
+
+<p>
+    <button @onclick="UpdateHeading">
+        Update heading
+    </button>
+</p>
+
+@code {
+    private string headingValue = "Initial heading";
+    private void UpdateHeading() => headingValue = $"New heading ({DateTime.Now})";
+
+    private string username = string.Empty;
+    private string message = string.Empty;
+    private ElementReference chatOutput;
+    private HubConnection? hubConnection;
+
+    private bool IsSendDisabled = false; //=> string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(message);
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(Navigation.ToAbsoluteUri("/chatHub"))
+            .WithAutomaticReconnect()
+            .Build();
+
+        hubConnection.On<string, string>("ReceiveMessage", async (user, receivedMessage) =>
+        {
+            var encodedMsg = $"{user}: {receivedMessage}\n";
+            await InvokeAsync(async () =>
+            {
+                await JS.InvokeVoidAsync("appendMessage", chatOutput, encodedMsg);
+            });
+        });
+
+        await hubConnection.StartAsync();
+    }
+
+    private void SendMessage()
+    {
+        // Логика отправки сообщения
+        Console.WriteLine($"Отправлено сообщение: {message}");
+        message = string.Empty;
+    }
+
+    // private async Task SendMessage()
+    // {
+    //     if (hubConnection is not null && !IsSendDisabled)
+    //     {
+    //         try
+    //         {
+    //             await hubConnection.SendAsync("SendMessage", username, message);
+    //             message = string.Empty;
+    //         }
+    //         catch (Exception ex)
+    //         {
+    //             Console.Error.WriteLine($"Ошибка отправки сообщения: {ex.Message}");
+    //         }
+    //     }
+    // }
+
+    // private async Task HandleKeyPress(KeyboardEventArgs e)
+    // {
+    //     if (e.Key == "Enter" && !IsSendDisabled)
+    //     {
+    //         await SendMessage();
+    //     }
+    // }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+}
