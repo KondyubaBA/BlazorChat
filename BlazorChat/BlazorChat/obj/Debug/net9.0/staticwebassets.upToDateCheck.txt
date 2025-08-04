@@ -1,2 +1,0 @@
-wwwroot\app.css
-C:\Users\Admin\Documents\GitHub\BlazorChat\BlazorChat\BlazorChat\wwwroot\app.css
