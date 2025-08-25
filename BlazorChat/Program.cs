@@ -9,6 +9,7 @@ namespace BlazorChat
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            //builder.WebHost.UseUrls("http://192.168.101.50");
             builder.Services.AddSignalR();
             // Add services to the container.
             builder.Services.AddRazorComponents()
